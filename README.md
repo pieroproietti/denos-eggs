@@ -30,9 +30,10 @@ source /usr/local/etc/bash_completion.d/deno.bash
 
 ```
 cd denos-eggs
-deno compile src/cells.ts`
+deno compile src/cells.ts
 sudo ln -s /home/artisan/denos-eggs/cells /usr/local/bin
 ```
+
 
 At this point we construct `cells.bash`:
 ```
