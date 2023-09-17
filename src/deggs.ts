@@ -410,9 +410,6 @@ await new Command()
   .command("help")
   .description("Display help for eggs")
   .usage("eggs --help")
-  .action(() => {
-    exec('eggs --help')
-  })
     /**
    * kill
    */
