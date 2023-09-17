@@ -1,8 +1,8 @@
-# deno
+# Denos eggs
 
-I'm working on an recent Arch system: colibri
+Questo dovrebbe essere un rifacimento di eggs fatto con deno. 
 
-## install
+## install deno
 
 ```
 curl -fsSL https://deno.land/x/install/install.sh | sh
@@ -10,9 +10,7 @@ curl -fsSL https://deno.land/x/install/install.sh | sh
 
 Manually add the directory to your $HOME/.bashrc (or similar)
 ```
-export DENO_INSTALL="/home/artisan/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-```
+e                                                                                                                                           
 
 ## autocomplete deno
 ```
@@ -29,9 +27,9 @@ source /usr/local/etc/bash_completion.d/deno.bash
 ## link ed autocomplete
 
 ```
-cd cells
+cd denos-eggs
 deno compile src/cells.ts`
-sudo ln -s /home/artisan/cells/cells /usr/local/bin
+sudo ln -s /home/artisan/denos-eggs/cells /usr/local/bin
 ```
 
 A questo punto costruiamo cells.bash
@@ -44,9 +42,6 @@ Aggiungere a `.bashrc` la riga:
 ```
 source /usr/local/etc/bash_completion.d/cells.bash
 ```
-
-
-
 
 ## vscode
 
