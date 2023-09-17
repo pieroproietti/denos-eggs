@@ -10,9 +10,12 @@ NOTE: This is a work in progress...
 curl -fsSL https://deno.land/x/install/install.sh | sh
 ```
 
-Manually add the directory to your $HOME/.bashrc (or similar)
+Manually add the directory to your `$HOME/.bashrc`` (or similar)
 ```
-e                                                                                                                                           
+export DENO_INSTALL="/home/artisan/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+```
+                                     
 
 ## install autocomplete deno
 ```
