@@ -1,4 +1,4 @@
-# Denos' eggs
+# Denos' eggs AKA deggs
 
 This should be a remake of [penguins'eggs](https://github.com/pieroproietti/penguins-eggs) made with [deno]().
 
@@ -33,19 +33,17 @@ source /usr/local/etc/bash_completion.d/deno.bash
 
 ```
 cd denos-eggs
-deno compile src/cells.ts
-sudo ln -s /home/artisan/denos-eggs/cells /usr/local/bin
+deno compile src/deggs.ts
+sudo ln -s /home/artisan/denos-eggs/deggs /usr/local/bin
 ```
-
-
-At this point we construct `cells.bash`:
+At this point we construct `deggs.bash`:
 ```
-cells autocomplete bash > cells.bash
-sudo mv cells.bash /usr/local/etc/bash_completion.d/
+deggs autocomplete bash > deggs.bash
+sudo mv deggs.bash /usr/local/etc/bash_completion.d/
 ```
 Add to `.bashrc` row:
 ```
-source /usr/local/etc/bash_completion.d/cells.bash
+source /usr/local/etc/bash_completion.d/deggs.bash
 ```
 
 ## vscode
@@ -62,11 +60,11 @@ On the autocomplete command has been associated `CompletionCommand()` which gene
 
 ### Create and install autocomplete
 * `cd`
-* `cells autocomplete bash > cells.bash`
-* `sudo mv cells.bash /usr/local/etc/bash_completion.d/`
+* `deggs autocomplete bash > deggs.bash`
+* `sudo mv deggs.bash /usr/local/etc/bash_completion.d/`
 
 It is necessary, finally, to add in `~/.bashrc`:
 
 ```
-source /usr/local/etc/bash_completion.d/eggs.bash
+source /usr/local/etc/bash_completion.d/deggs.bash
 ```

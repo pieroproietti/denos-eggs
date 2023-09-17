@@ -1,1 +1,1 @@
-mv cells.bash /usr/local/etc/bash_completion.d/
+mv deggs.bash /usr/local/etc/bash_completion.d/

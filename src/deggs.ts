@@ -41,7 +41,7 @@ const toolsCommand = new Command()
       flags += " --verbose";
     }
     const cmd = `eggs tools ppa ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * tools skel
@@ -61,7 +61,7 @@ const toolsCommand = new Command()
       flags += " --verbose";
     }
     const cmd =`eggs tools skel ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * tools stat
@@ -85,7 +85,7 @@ const toolsCommand = new Command()
       flags += " --verbose";
     }
     const cmd = `eggs tools stat ${flags}`
-    exec (cmd)
+    console.log(cmd)
   })
   /**
    * tools yolk
@@ -101,7 +101,7 @@ const toolsCommand = new Command()
       flags = " --verbose";
     }
     const cmd = `eggs yolk ${flags}`
-    exec (cmd)
+    console.log(cmd)
   });
 /**
  * exportCommand
@@ -130,7 +130,7 @@ const exportCommand = new Command()
       flags += " --verbose";
     }
     const cmd=`eggs export deb ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * export iso
@@ -150,7 +150,7 @@ const exportCommand = new Command()
       flags += " --verbose";
     }
     const cmd = `eggs export iso ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * export pkg
@@ -170,7 +170,7 @@ const exportCommand = new Command()
       flags += " --verbose";
     }
     const cmd = `eggs export pkg ${flags}`
-    exec (cmd)
+    console.log(cmd)
   });
 /**
  * wardorbeCommand
@@ -193,7 +193,7 @@ const wardrobeCommand = new Command()
     }
     const repo = args[1];
     const cmd = `eggs wargrobe get ${repo} ${flags}`
-    exec (cmd)
+    console.log(cmd)
   })
   /**
    * wardrobe list
@@ -213,7 +213,7 @@ const wardrobeCommand = new Command()
       flags += "  --verbose";
     }
     const cmd = `eggs wardrobe list ${p.wardrobe}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * wardrobe show
@@ -237,7 +237,7 @@ const wardrobeCommand = new Command()
       flags = " --verbose";
     }
     const cmd ="eggs wardrobe show" + flags
-    exec (cmd)
+    console.log(cmd)
   })
   /**
    * wardrobe wear
@@ -258,7 +258,7 @@ const wardrobeCommand = new Command()
       costume = args[1];
     }
     const cmd = `eggs wargrobe wear ${costume} ${flags}`
-    exec(cmd)
+    console.log(cmd)
   });
 
 /**
@@ -267,8 +267,8 @@ const wardrobeCommand = new Command()
 
 /** */
 await new Command()
-  .name("cells")
-  .description("cells: the reproductive system of penguins")
+  .name("deggs")
+  .description("E G G S: the reproductive system of penguins")
   .version("v0.0.1")
   .command("export", exportCommand)
   .command("tools", toolsCommand)
@@ -297,7 +297,7 @@ await new Command()
       flags += ' --verbose'
     }
     const cmd = 'eggs analyze' + flags
-    exec (cmd)
+    console.log(cmd)
   })
   /**
    * autocomplete
@@ -342,7 +342,7 @@ await new Command()
       flags+=' --verbose'
     }
     const cmd ='eggs calamares '+ flags
-    exec (cmd)
+    console.log(cmd)
   })
 
   /**
@@ -371,7 +371,7 @@ await new Command()
       flags += ` --verbose`
     }
     const cmd = `eggs config ${flags}`
-    exec (cmd)
+    console.log(cmd)
   })
   /**
    * cuckoo
@@ -402,7 +402,7 @@ await new Command()
       flags += " --verbose";
     }
     const cmd =`eggs dad ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * help
@@ -431,7 +431,7 @@ await new Command()
       flags += ' --verbose'
     }
     const cmd = `eggs kill ${flags}`
-    exec (cmd)
+    console.log(cmd)
   }) 
   /**
    * krill
@@ -495,7 +495,7 @@ await new Command()
       flags += ' --verbose' // "verbose"
     }
     const cmd = `eggs install ${flags}`
-    exec(cmd)
+    console.log(cmd)
   })
   /**
    * mom
@@ -641,6 +641,6 @@ await new Command()
       flags += ' --verbose='
     }
     const cmd = `eggs update ${flags}`
-    exec (cmd)
+    console.log(cmd)
   })
   .parse();
