@@ -580,40 +580,55 @@ await new Command()
   .command("status")
   .description("informations about eggs status")
   .option("-v, --verbose", "verbose")
+  .action((...args) => {
+    const p = args[0]
+    let flags = ''
+    if (p.verbose) {
+      flags += " --verbose"
+    }
+    const cmd = `eggs status ${flags}`
+  })
   /**
    * syncfrom
    */
   .command("syncfrom")
   .description("Restore users and user data from a LUKS volumes")
-  .option("-C, --cryptedclone", "crypted clone")
-  .option("-N, --noicons", "no icons on desktop")
-  .option("-c, --clone", "clone")
-  .option("-f, --standard", "standard compression")
-  .option("-m, --max", "max compression")
-  .option("-n, --nointeractive", "no user interaction")
-  .option("-p, --prefix <value>", "prefix")
-  .option("-s, --script", "script mode. Generate scripts to manage iso build")
-  .option("-y, --yolk", "force yolk renew")
-  .option(
-    "--addons, <value>",
-    "addons to be used: adapt, ichoice, pve, rsupport",
-  )
-  .option("--basename <value>", "basename")
-  .option(
-    "--release",
-    "release: max compression, remove penguins-eggs and calamares after installation",
-  )
-  .option(
-    "--theme <value>",
-    "theme for livecd, calamares branding and partitions",
-  )
+  .option("-f, --file=<value>", "file LUKS volume encrypted")
+  .option("-r, --rootdir=<value>", "rootdir of the installed system, when used from live")
+  .option("--delete=<value>", "rsync --delete delete extraneous files from dest dirs")
   .option("-v, --verbose", "verbose")
+  .action((...args) => {
+    const p = args[0]
+    let flags = ''
+    if (p.file) {
+      flags += ' --file=' + p.file
+    }
+    if (p.rootdir) {
+      flags += ' --rootdir=' + p.rootdir
+    }
+    if (p.delete) {
+      flags += ' --delete=' + p.delete
+    }
+    if (p.verbose) {
+      flags += ' --verbose'
+    }
+    const cmd = `eggs syncfrom ${flags}`
+  })
+
   /**
    * syncto
    */
   .command("syncto")
   .description("saves users and user data in a LUKS volume inside the iso")
   .option("-v, --verbose", "verbose")
+  .arction((...args) => {
+    const p = args[0]
+    let flags = ''
+    if (p.verbose) {
+      flags += ' --verbose'
+    }
+    const cmd = `eggs syncto ${flags}`
+  })
   /**
    * update
    */
