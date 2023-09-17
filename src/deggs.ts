@@ -621,7 +621,7 @@ await new Command()
   .command("syncto")
   .description("saves users and user data in a LUKS volume inside the iso")
   .option("-v, --verbose", "verbose")
-  .arction((...args) => {
+  .action((...args) => {
     const p = args[0]
     let flags = ''
     if (p.verbose) {
@@ -635,9 +635,7 @@ await new Command()
   .command("update")
   .description("update the Penguins' eggs tool")
   .option("-f, --file=<value>", "file LUKS volume encrypted")
-  .option(
-    "--delete=<value>",
-    "rsync --delete delete extraneous files from dest dirs",
+  .option("--delete",  "delete extraneous files from dest dirs"
   )
   .option("-v, --verbose", "verbose")
   .action((...args) => {
