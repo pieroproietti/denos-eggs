@@ -60,7 +60,7 @@ const toolsCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd =`eggs tools skel ${flags}`
+    const cmd = `eggs tools skel ${flags}`
     console.log(cmd)
   })
   /**
@@ -129,7 +129,7 @@ const exportCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd=`eggs export deb ${flags}`
+    const cmd = `eggs export deb ${flags}`
     console.log(cmd)
   })
   /**
@@ -236,7 +236,7 @@ const wardrobeCommand = new Command()
     if (p.verbose) {
       flags = " --verbose";
     }
-    const cmd ="eggs wardrobe show" + flags
+    const cmd = `eggs wardrobe show ${flags}`
     console.log(cmd)
   })
   /**
@@ -293,10 +293,10 @@ await new Command()
   .action((...args) => {
     const p = args[0]
     let flags = ''
-    if (p.verbose){
+    if (p.verbose) {
       flags += ' --verbose'
     }
-    const cmd = 'eggs analyze' + flags
+    const cmd = `eggs analyze ${flags}`
     console.log(cmd)
   })
   /**
@@ -319,29 +319,29 @@ await new Command()
   .action((...args) => {
     const p = args[0]
     let flags = ''
-    if (p.noicons){
-      flags+=' --noicons'
+    if (p.noicons) {
+      flags += ' --noicons'
     }
-    if (p.install){
-      flags+=' --install'
+    if (p.install) {
+      flags += ' --install'
     }
-    if (p.nointeractive){
-      flags+=' --nointeractive'
+    if (p.nointeractive) {
+      flags += ' --nointeractive'
     }
-    if (p.release){
-      flags+=' --release'
+    if (p.release) {
+      flags += ' --release'
     }
-    if (p.remove){
-      flags+=' --remove'
+    if (p.remove) {
+      flags += ' --remove'
     }
-    if (p.theme){
-      flags+=' --theme='+ p.theme
+    if (p.theme) {
+      flags += ' --theme=' + p.theme
     }
-        
-    if (p.verbose){
-      flags+=' --verbose'
+
+    if (p.verbose) {
+      flags += ' --verbose'
     }
-    const cmd ='eggs calamares '+ flags
+    const cmd = `eggs calamares ${flags}`
     console.log(cmd)
   })
 
@@ -355,19 +355,19 @@ await new Command()
   .option("-c, --clean", "remove old configuration before to create new one")
   .option("-n, --nointeractive", "no user interaction")
   .option("-v, --verbose", "verbose")
-  .action((...args) =>{
+  .action((...args) => {
     const p = args[0]
     let flags = ''
-    if (p.noicons){
+    if (p.noicons) {
       flags += ` --noicons`
     }
-    if (p.clean){
+    if (p.clean) {
       flags += ` --clean`
     }
-    if (p.nointeractive){
+    if (p.nointeractive) {
       flags += ` --nointeractive`
     }
-    if (p.verbose){
+    if (p.verbose) {
       flags += ` --verbose`
     }
     const cmd = `eggs config ${flags}`
@@ -380,6 +380,15 @@ await new Command()
   .description("PXE start with proxy-dhcp")
   .usage("")
   .option("-v, --verbose", "verbose")
+  .action((...args) => {
+    const p = args[0]
+    let flags = ''
+    if (p.verbose) {
+      flags += ' --verbose'
+    }
+    const cmd = `eggs cmd ${flags}`
+    console.log(cmd)
+  })
   /**
    * dad
    */
@@ -401,7 +410,7 @@ await new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd =`eggs dad ${flags}`
+    const cmd = `eggs dad ${flags}`
     console.log(cmd)
   })
   /**
@@ -410,9 +419,9 @@ await new Command()
   .command("help")
   .description("Display help for eggs")
   .usage("eggs --help")
-    /**
-   * kill
-   */
+  /**
+ * kill
+ */
   .command("kill")
   .description("kill the eggs/free the nest")
   .usage("[--nointeractive]")
@@ -421,15 +430,15 @@ await new Command()
   .action((...args) => {
     const p = args[0]
     let flags = ''
-    if (p.nointeractive){
+    if (p.nointeractive) {
       flags += ' --nointeractive'
     }
-    if (p.verbose){
+    if (p.verbose) {
       flags += ' --verbose'
     }
     const cmd = `eggs kill ${flags}`
     console.log(cmd)
-  }) 
+  })
   /**
    * krill
    */
@@ -450,7 +459,7 @@ await new Command()
   .option("-u, --unattended", "Unattended installation")
   .option("-v, --verbose", "Verbose")
   .action((...args) => {
-    const p =args[0]
+    const p = args[0]
     let flags = ''
     if (p.halt) {
       flags += ' --halt'
@@ -499,6 +508,11 @@ await new Command()
    */
   .command("mom", "ask help from mommy - TUI helper")
   .usage("")
+  .action((...args) => {
+    const p = args[0]
+    const cmd = `eggs mom`
+    console.log(cmd)
+  })
   /**
    * produce
    */
@@ -572,7 +586,8 @@ await new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    console.log("eggs produce" + flags);
+    const cmd = `eggs produce ${flags}`
+    console.log(cmd)
   })
   /**
    * status
@@ -587,6 +602,7 @@ await new Command()
       flags += " --verbose"
     }
     const cmd = `eggs status ${flags}`
+    console.log(cmd)
   })
   /**
    * syncfrom
@@ -613,6 +629,7 @@ await new Command()
       flags += ' --verbose'
     }
     const cmd = `eggs syncfrom ${flags}`
+    console.log(cmd)
   })
 
   /**
@@ -628,6 +645,7 @@ await new Command()
       flags += ' --verbose'
     }
     const cmd = `eggs syncto ${flags}`
+    console.log(cmd)
   })
   /**
    * update
@@ -635,7 +653,7 @@ await new Command()
   .command("update")
   .description("update the Penguins' eggs tool")
   .option("-f, --file=<value>", "file LUKS volume encrypted")
-  .option("--delete",  "delete extraneous files from dest dirs"
+  .option("--delete", "delete extraneous files from dest dirs"
   )
   .option("-v, --verbose", "verbose")
   .action((...args) => {
@@ -645,7 +663,7 @@ await new Command()
       flags += ' --delete'
     }
     if (p.file) {
-      flags += ' --file='+p.file
+      flags += ' --file=' + p.file
     }
     if (p.verbose) {
       flags += ' --verbose='

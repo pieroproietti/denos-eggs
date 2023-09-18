@@ -1,8 +1,8 @@
 # Denos' eggs AKA deggs
 
-This should be a remake of [penguins'eggs](https://github.com/pieroproietti/penguins-eggs) made with [deno]().
+This should be a remake of [penguins'eggs](https://github.com/pieroproietti/penguins-eggs) made with [deno](https://deno.com/).
 
-NOTE: This is a work in progress...
+NOTE: At the moment this is just a work in progress...
 
 ## install deno
 
