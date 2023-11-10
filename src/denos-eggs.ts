@@ -27,7 +27,6 @@ const toolsCommand = new Command()
     const cmd = `eggs tools clean ${flags}`;
     console.log(cmd);
   })
-
   /**
    * tools ppa-
    */
@@ -111,7 +110,7 @@ const toolsCommand = new Command()
   .usage("")
   .option("-v, --verbose", "Show verbose")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.verbose) {
       flags = " --verbose";
@@ -134,7 +133,7 @@ const exportCommand = new Command()
   .option("-c, --clean", "Clean old packages.")
   .option("-v, --verbose", "Show verbose.")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.all) {
       flags += " --all";
@@ -157,7 +156,7 @@ const exportCommand = new Command()
   .option("-c, --clean", "Clean old images")
   .option("-v, --verbose", "Show verbose")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.clean) {
       flags += " --clean";
@@ -177,7 +176,7 @@ const exportCommand = new Command()
   .option("-c, --clean", "Clean old pkgs")
   .option("-v, --verbose", "Show verbose")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.clean) {
       flags += " --clean";
@@ -264,7 +263,7 @@ const wardrobeCommand = new Command()
   .usage("")
   .option("-v, --verbose", "Show verbose")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.verbose) {
       flags += " --verbose";
@@ -524,7 +523,8 @@ await new Command()
   .command("mom", "ask help from mommy - TUI helper")
   .usage("")
   .action((...args) => {
-    const p = args[0];
+    const _p = args[0];
+
     const cmd = `eggs mom`;
     console.log(cmd);
   })
@@ -557,7 +557,7 @@ await new Command()
   )
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    let p = args[0];
+    const p = args[0];
     let flags = "";
     if (p.cryptedclone) {
       flags += " --cryptedclone";
