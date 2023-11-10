@@ -1,2 +1,2 @@
-denos-eggs autocomplete bash > denos-eggs.bash
+deno run ./src/denoseggs.ts autocomplete bash > denoseggs.bash
 

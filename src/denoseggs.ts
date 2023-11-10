@@ -6,11 +6,13 @@ import { exec } from "./deps.ts";
 /**
  * FIRST: we define submenus
  */
+console.clear()
+console.log("E G G S: the reproductive system of penguins")
+
 
 /**
  * toolsCommand
  */
-
 const toolsCommand = new Command()
   .description("tools menu")
   .command("clean")
@@ -691,3 +693,4 @@ await new Command()
     console.log(cmd);
   })
   .parse();
+

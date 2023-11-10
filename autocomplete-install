@@ -1,1 +1,1 @@
-mv denos-eggs.bash /usr/local/etc/bash_completion.d/
+mv denoseggs.bash /usr/local/etc/bash_completion.d/
