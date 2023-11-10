@@ -1,4 +1,4 @@
-# Denos' eggs AKA deggs
+# denos-eggs
 
 This should be a remake of
 [penguins'eggs](https://github.com/pieroproietti/penguins-eggs) made with
