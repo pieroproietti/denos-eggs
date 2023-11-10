@@ -33,17 +33,17 @@ source /usr/local/etc/bash_completion.d/deno.bash
 
 ```
 cd denos-eggs
-deno compile src/deggs.ts
-sudo ln -s /home/artisan/denos-eggs/deggs /usr/local/bin
+deno compile src/denos-eggs.ts
+sudo ln -s /home/artisan/denos-eggs/denos-eggs /usr/local/bin
 ```
-At this point we construct `deggs.bash`:
+At this point we construct `denos-eggs.bash`:
 ```
-deggs autocomplete bash > deggs.bash
-sudo mv deggs.bash /usr/local/etc/bash_completion.d/
+denos-eggs autocomplete bash > denos-eggs.bash
+sudo mv denos-eggs.bash /usr/local/etc/bash_completion.d/
 ```
 Add to `.bashrc` row:
 ```
-source /usr/local/etc/bash_completion.d/deggs.bash
+source /usr/local/etc/bash_completion.d/denos-eggs.bash
 ```
 
 ## vscode
@@ -60,11 +60,11 @@ On the autocomplete command has been associated `CompletionCommand()` which gene
 
 ### Create and install autocomplete
 * `cd`
-* `deggs autocomplete bash > deggs.bash`
-* `sudo mv deggs.bash /usr/local/etc/bash_completion.d/`
+* `denos-eggs autocomplete bash > denos-eggs.bash`
+* `sudo mv denos-eggs.bash /usr/local/etc/bash_completion.d/`
 
 It is necessary, finally, to add in `~/.bashrc`:
 
 ```
-source /usr/local/etc/bash_completion.d/deggs.bash
+source /usr/local/etc/bash_completion.d/denos-eggs.bash
 ```
