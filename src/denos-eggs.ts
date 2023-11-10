@@ -10,8 +10,24 @@ import { exec } from "./deps.ts";
 /**
  * toolsCommand
  */
+
 const toolsCommand = new Command()
   .description("tools menu")
+  .command("clean")
+  .description("tools clean")
+  .option("-n, --nointeractive", "no user interaction")
+  .option("-v, --verbose", "Show verbose")
+  .action((...args) => {
+    const p = args[0];
+    let flags = "";
+    if (p.verbose) {
+      flags += " --verbose";
+    }
+
+    const cmd = `eggs tools clean ${flags}`;
+    console.log(cmd);
+  })
+
   /**
    * tools ppa-
    */
