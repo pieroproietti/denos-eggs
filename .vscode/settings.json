@@ -1,5 +1,5 @@
 {
-    "deno.enable": true,
-    "deno.lint": true, // inline deno lint diagnostics, requires `deno.unstable`
-    "deno.unstable": true // also provides unstable type declarations in VS Code
+  "deno.enable": true,
+  "deno.lint": true, // inline deno lint diagnostics, requires `deno.unstable`
+  "deno.unstable": true // also provides unstable type declarations in VS Code
 }

@@ -40,8 +40,8 @@ const toolsCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs tools ppa ${flags}`
-    console.log(cmd)
+    const cmd = `eggs tools ppa ${flags}`;
+    console.log(cmd);
   })
   /**
    * tools skel
@@ -60,8 +60,8 @@ const toolsCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs tools skel ${flags}`
-    console.log(cmd)
+    const cmd = `eggs tools skel ${flags}`;
+    console.log(cmd);
   })
   /**
    * tools stat
@@ -84,8 +84,8 @@ const toolsCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs tools stat ${flags}`
-    console.log(cmd)
+    const cmd = `eggs tools stat ${flags}`;
+    console.log(cmd);
   })
   /**
    * tools yolk
@@ -100,8 +100,8 @@ const toolsCommand = new Command()
     if (p.verbose) {
       flags = " --verbose";
     }
-    const cmd = `eggs yolk ${flags}`
-    console.log(cmd)
+    const cmd = `eggs yolk ${flags}`;
+    console.log(cmd);
   });
 /**
  * exportCommand
@@ -129,8 +129,8 @@ const exportCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs export deb ${flags}`
-    console.log(cmd)
+    const cmd = `eggs export deb ${flags}`;
+    console.log(cmd);
   })
   /**
    * export iso
@@ -149,8 +149,8 @@ const exportCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs export iso ${flags}`
-    console.log(cmd)
+    const cmd = `eggs export iso ${flags}`;
+    console.log(cmd);
   })
   /**
    * export pkg
@@ -169,8 +169,8 @@ const exportCommand = new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs export pkg ${flags}`
-    console.log(cmd)
+    const cmd = `eggs export pkg ${flags}`;
+    console.log(cmd);
   });
 /**
  * wardorbeCommand
@@ -192,8 +192,8 @@ const wardrobeCommand = new Command()
       flags += " --verbose";
     }
     const repo = args[1];
-    const cmd = `eggs wargrobe get ${repo} ${flags}`
-    console.log(cmd)
+    const cmd = `eggs wargrobe get ${repo} ${flags}`;
+    console.log(cmd);
   })
   /**
    * wardrobe list
@@ -212,8 +212,8 @@ const wardrobeCommand = new Command()
     if (p.verbose) {
       flags += "  --verbose";
     }
-    const cmd = `eggs wardrobe list ${p.wardrobe}`
-    console.log(cmd)
+    const cmd = `eggs wardrobe list ${p.wardrobe}`;
+    console.log(cmd);
   })
   /**
    * wardrobe show
@@ -236,8 +236,8 @@ const wardrobeCommand = new Command()
     if (p.verbose) {
       flags = " --verbose";
     }
-    const cmd = `eggs wardrobe show ${flags}`
-    console.log(cmd)
+    const cmd = `eggs wardrobe show ${flags}`;
+    console.log(cmd);
   })
   /**
    * wardrobe wear
@@ -257,8 +257,8 @@ const wardrobeCommand = new Command()
     if (args[1] !== undefined) {
       costume = args[1];
     }
-    const cmd = `eggs wargrobe wear ${costume} ${flags}`
-    console.log(cmd)
+    const cmd = `eggs wargrobe wear ${costume} ${flags}`;
+    console.log(cmd);
   });
 
 /**
@@ -291,13 +291,13 @@ await new Command()
   .usage("")
   .option("-v, --verbose", "Show verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs analyze ${flags}`
-    console.log(cmd)
+    const cmd = `eggs analyze ${flags}`;
+    console.log(cmd);
   })
   /**
    * autocomplete
@@ -317,34 +317,33 @@ await new Command()
   .option("--remove", "uninstall calamares and its dependencies")
   .option("--theme=<value>", "theme/branding for eggs and calamares")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.noicons) {
-      flags += ' --noicons'
+      flags += " --noicons";
     }
     if (p.install) {
-      flags += ' --install'
+      flags += " --install";
     }
     if (p.nointeractive) {
-      flags += ' --nointeractive'
+      flags += " --nointeractive";
     }
     if (p.release) {
-      flags += ' --release'
+      flags += " --release";
     }
     if (p.remove) {
-      flags += ' --remove'
+      flags += " --remove";
     }
     if (p.theme) {
-      flags += ' --theme=' + p.theme
+      flags += " --theme=" + p.theme;
     }
 
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs calamares ${flags}`
-    console.log(cmd)
+    const cmd = `eggs calamares ${flags}`;
+    console.log(cmd);
   })
-
   /**
    * config
    */
@@ -356,22 +355,22 @@ await new Command()
   .option("-n, --nointeractive", "no user interaction")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.noicons) {
-      flags += ` --noicons`
+      flags += ` --noicons`;
     }
     if (p.clean) {
-      flags += ` --clean`
+      flags += ` --clean`;
     }
     if (p.nointeractive) {
-      flags += ` --nointeractive`
+      flags += ` --nointeractive`;
     }
     if (p.verbose) {
-      flags += ` --verbose`
+      flags += ` --verbose`;
     }
-    const cmd = `eggs config ${flags}`
-    console.log(cmd)
+    const cmd = `eggs config ${flags}`;
+    console.log(cmd);
   })
   /**
    * cuckoo
@@ -381,13 +380,13 @@ await new Command()
   .usage("")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs cmd ${flags}`
-    console.log(cmd)
+    const cmd = `eggs cmd ${flags}`;
+    console.log(cmd);
   })
   /**
    * dad
@@ -399,7 +398,7 @@ await new Command()
   .option("-d, --default", "remove old configuration and force default")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
+    const p = args[0];
     let flags = "";
     if (p.clean) {
       flags += " --clean";
@@ -410,8 +409,8 @@ await new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs dad ${flags}`
-    console.log(cmd)
+    const cmd = `eggs dad ${flags}`;
+    console.log(cmd);
   })
   /**
    * help
@@ -420,24 +419,24 @@ await new Command()
   .description("Display help for eggs")
   .usage("eggs --help")
   /**
- * kill
- */
+   * kill
+   */
   .command("kill")
   .description("kill the eggs/free the nest")
   .usage("[--nointeractive]")
   .option("-n, --nointeractive", "non interactive")
   .option("-v, --verbose", "Verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.nointeractive) {
-      flags += ' --nointeractive'
+      flags += " --nointeractive";
     }
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs kill ${flags}`
-    console.log(cmd)
+    const cmd = `eggs kill ${flags}`;
+    console.log(cmd);
   })
   /**
    * krill
@@ -459,49 +458,49 @@ await new Command()
   .option("-u, --unattended", "Unattended installation")
   .option("-v, --verbose", "Verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.halt) {
-      flags += ' --halt'
+      flags += " --halt";
     }
     if (p.none) {
-      flags += ' --none' //  "Swap none: 256M"
+      flags += " --none"; //  "Swap none: 256M"
     }
     if (p.suspend) {
-      flags += ' --suspend' //  "Swap suspend: RAM x 2"
+      flags += " --suspend"; //  "Swap suspend: RAM x 2"
     }
     if (p.custom) {
-      flags += ' --custom=' + p.custom //  "custom unattended configuration")
+      flags += " --custom=" + p.custom; //  "custom unattended configuration")
     }
     if (p.domain) {
-      flags += ' --domain=' + p.domain //  "Domain name, defult: .local")
+      flags += " --domain=" + p.domain; //  "Domain name, defult: .local")
     }
     if (p.ip) {
-      flags += ' --ip=' // "hostname as ip, eg: ip-192-168-1-33")
+      flags += " --ip="; // "hostname as ip, eg: ip-192-168-1-33")
     }
     if (p.crypted) {
-      flags += ' --crypted'
+      flags += " --crypted";
     }
     if (p.nointeractive) {
-      flags += ' --nointeractive'
+      flags += " --nointeractive";
     }
     if (p.pve) {
-      flags += ' --pve'
+      flags += " --pve";
     }
     if (p.random) {
-      flags += ' --random' // "Add random to hostname, eg: colibri-ay412dt")
+      flags += " --random"; // "Add random to hostname, eg: colibri-ay412dt")
     }
     if (p.small) {
-      flags += ' --small' // "Swap small: RAM")
+      flags += " --small"; // "Swap small: RAM")
     }
     if (p.unattended) {
-      flags += ' --unattended' // "Unattended installation"
+      flags += " --unattended"; // "Unattended installation"
     }
     if (p.verbose) {
-      flags += ' --verbose' // "verbose"
+      flags += " --verbose"; // "verbose"
     }
-    const cmd = `eggs install ${flags}`
-    console.log(cmd)
+    const cmd = `eggs install ${flags}`;
+    console.log(cmd);
   })
   /**
    * mom
@@ -509,9 +508,9 @@ await new Command()
   .command("mom", "ask help from mommy - TUI helper")
   .usage("")
   .action((...args) => {
-    const p = args[0]
-    const cmd = `eggs mom`
-    console.log(cmd)
+    const p = args[0];
+    const cmd = `eggs mom`;
+    console.log(cmd);
   })
   /**
    * produce
@@ -586,8 +585,8 @@ await new Command()
     if (p.verbose) {
       flags += " --verbose";
     }
-    const cmd = `eggs produce ${flags}`
-    console.log(cmd)
+    const cmd = `eggs produce ${flags}`;
+    console.log(cmd);
   })
   /**
    * status
@@ -596,13 +595,13 @@ await new Command()
   .description("informations about eggs status")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.verbose) {
-      flags += " --verbose"
+      flags += " --verbose";
     }
-    const cmd = `eggs status ${flags}`
-    console.log(cmd)
+    const cmd = `eggs status ${flags}`;
+    console.log(cmd);
   })
   /**
    * syncfrom
@@ -610,28 +609,33 @@ await new Command()
   .command("syncfrom")
   .description("Restore users and user data from a LUKS volumes")
   .option("-f, --file=<value>", "file LUKS volume encrypted")
-  .option("-r, --rootdir=<value>", "rootdir of the installed system, when used from live")
-  .option("--delete=<value>", "rsync --delete delete extraneous files from dest dirs")
+  .option(
+    "-r, --rootdir=<value>",
+    "rootdir of the installed system, when used from live",
+  )
+  .option(
+    "--delete=<value>",
+    "rsync --delete delete extraneous files from dest dirs",
+  )
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.file) {
-      flags += ' --file=' + p.file
+      flags += " --file=" + p.file;
     }
     if (p.rootdir) {
-      flags += ' --rootdir=' + p.rootdir
+      flags += " --rootdir=" + p.rootdir;
     }
     if (p.delete) {
-      flags += ' --delete=' + p.delete
+      flags += " --delete=" + p.delete;
     }
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs syncfrom ${flags}`
-    console.log(cmd)
+    const cmd = `eggs syncfrom ${flags}`;
+    console.log(cmd);
   })
-
   /**
    * syncto
    */
@@ -639,13 +643,13 @@ await new Command()
   .description("saves users and user data in a LUKS volume inside the iso")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.verbose) {
-      flags += ' --verbose'
+      flags += " --verbose";
     }
-    const cmd = `eggs syncto ${flags}`
-    console.log(cmd)
+    const cmd = `eggs syncto ${flags}`;
+    console.log(cmd);
   })
   /**
    * update
@@ -653,22 +657,21 @@ await new Command()
   .command("update")
   .description("update the Penguins' eggs tool")
   .option("-f, --file=<value>", "file LUKS volume encrypted")
-  .option("--delete", "delete extraneous files from dest dirs"
-  )
+  .option("--delete", "delete extraneous files from dest dirs")
   .option("-v, --verbose", "verbose")
   .action((...args) => {
-    const p = args[0]
-    let flags = ''
+    const p = args[0];
+    let flags = "";
     if (p.delete) {
-      flags += ' --delete'
+      flags += " --delete";
     }
     if (p.file) {
-      flags += ' --file=' + p.file
+      flags += " --file=" + p.file;
     }
     if (p.verbose) {
-      flags += ' --verbose='
+      flags += " --verbose=";
     }
-    const cmd = `eggs update ${flags}`
-    console.log(cmd)
+    const cmd = `eggs update ${flags}`;
+    console.log(cmd);
   })
   .parse();
