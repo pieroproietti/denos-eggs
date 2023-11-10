@@ -62,6 +62,6 @@ Then enable deno for the workspace.
 
 ## src
 
-I am currently trying to build just cells.ts which should use
+I am currently trying to build just a mockup which should use
 [cliffy](https://cliffy.io/) to implement the various eggs commands and build
 the file for autocomplete.
